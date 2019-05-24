@@ -52,7 +52,7 @@ UrlResolver.configuration.timeout = 60
 
 ### Changelog
 
-##### 0.3.0
+##### 0.3.1
 + Update rest-client to 2.0.2
 + Add http timeout configuration
 + Handle multi-hop redirects that end in unreachable urls (non-http, unknown hostnames)
