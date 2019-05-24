@@ -1,4 +1,4 @@
-require_relative './lib/url_resolver/version'
+require './lib/url_resolver/version'
 
 Gem::Specification.new do |s|
   s.name        = 'url_resolver'
