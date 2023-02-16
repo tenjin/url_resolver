@@ -52,6 +52,10 @@ UrlResolver.configuration.timeout = 60
 
 ### Changelog
 
+##### 0.3.2
++ Use ruby 2.7.7 for building
++ Fix compatability with ruby >= 2.6
+
 ##### 0.3.1
 + Update rest-client to 2.0.2
 + Add http timeout configuration
