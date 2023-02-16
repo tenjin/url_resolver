@@ -37,7 +37,7 @@ module UrlResolver
       cache.set_url(url_to_check, url) if UrlResolver.configuration.cache_failures
       url
     rescue Exception => e
-      if e.message =~ /undefined method `request_uri'/
+      if e.message =~ /undefined method `request_uri'|not an HTTP URI/
         # non-http URI
         cache.set_url(url_to_check, last_location) if UrlResolver.configuration.cache_failures
         last_location
