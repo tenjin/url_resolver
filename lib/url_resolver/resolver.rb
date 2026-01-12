@@ -13,7 +13,11 @@ module UrlResolver
     end
 
     def resolve(url)
-      url_to_check = URI.escape(url)
+      uri = URI.parse(url)
+      uri.path = uri.path.split('/').map { |segment| ERB::Util.url_encode(segment) }.join('/') if uri.path
+      uri.query = URI.encode_www_form(URI.decode_www_form(uri.query)) if uri.query
+      url_to_check = uri.to_s
+
       cached_url = cache.get_url(url_to_check)
       return cached_url if cached_url
 
