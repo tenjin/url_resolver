@@ -52,6 +52,9 @@ UrlResolver.configuration.timeout = 60
 
 ### Changelog
 
+##### 0.3.3
++ Update Resolver#resolve method to add URL encoding
+
 ##### 0.3.2
 + Use ruby 2.7.7 for building
 + Fix compatability with ruby >= 2.6
