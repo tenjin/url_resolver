@@ -3,10 +3,13 @@ jobs:
   build:
     docker:
       - image: cimg/ruby:2.7.7
+    environment:
+      BUNDLE_FROZEN: "true"
+      BUNDLE_PATH: vendor/bundle
     steps:
       - checkout
       - run:
-          command: gem install bundler -v 1.17.3
+          command: gem install bundler -v 2.4.22
       - run:
           name: Which bundler?
           command: bundle -v
@@ -16,7 +19,7 @@ jobs:
           - gem-cache-v1-
       - run:
           name: Bundle Install
-          command: bundle check --path vendor/bundle || bundle install --path vendor/bundle
+          command: bundle _2.4.22_ install
       - save_cache:
           key: gem-cache-v1-{{ checksum "Gemfile.lock" }}
           paths:
