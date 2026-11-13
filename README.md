@@ -52,6 +52,12 @@ UrlResolver.configuration.timeout = 60
 
 ### Changelog
 
+##### Unreleased
++ Require Addressable 2.9.1 or newer for development to fix URI template and normalization vulnerabilities.
++ Use Bundler 2.4.22 and frozen installs in CI.
++ Allow development on Ruby 2.7.7 or newer without changing the gem's runtime requirements.
++ Update Crack to declare its XML parser dependencies on newer Ruby versions.
+
 ##### 0.3.3
 + Update Resolver#resolve method to add URL encoding
 
